@@ -13,22 +13,48 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="gallery.html">Gallery</a>
-        <a href="inspiration.html">Inspiration</a>
     </nav>
 </header>
 
-<section class="gallery">
-    <img src="photos/IMG_166029.JPG" onclick="openLightbox(this)">
-    <img src="photos/IMG_166032.JPG" onclick="openLightbox(this)">
-    <img src="photos/IMG_166036.JPG" onclick="openLightbox(this)">
-    <img src="photos/IMG_166041.JPG" onclick="openLightbox(this)">
-    <img src="photos/IMG_166043.JPG" onclick="openLightbox(this)">
-    <img src="photos/IMG_166050.JPG" onclick="openLightbox(this)">
-</section>
+<main class="gallery-page">
+
+    <!-- Section 1 -->
+    <section class="gallery-section">
+        <button class="gallery-toggle expanded" type="button">
+            <span class="toggle-symbol">-</span>
+            <span class="toggle-title">Title 1</span>
+        </button>
+
+        <div class="gallery-content open">
+            <div class="gallery-grid">
+                <img src="photos/IMG_166029.JPG" onclick="openLightbox(this)">
+                <img src="photos/IMG_166030.JPG" onclick="openLightbox(this)">
+                <img src="photos/IMG_166032.JPG" onclick="openLightbox(this)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="gallery-section">
+        <button class="gallery-toggle" type="button">
+            <span class="toggle-symbol">+</span>
+            <span class="toggle-title">Title 2</span>
+        </button>
+
+        <div class="gallery-content">
+            <div class="gallery-grid">
+                <img src="photos/IMG_166029.JPG" onclick="openLightbox(this)">
+                <img src="photos/IMG_166030.JPG" onclick="openLightbox(this)">
+                <img src="photos/IMG_166032.JPG" onclick="openLightbox(this)">
+            </div>
+        </div>
+    </section>
+
+</main>
 
 <!-- Lightbox -->
 <div id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img">
+    <img id="lightbox-img" alt="Expanded photo">
 </div>
 
 <script src="js/gallery.js"></script>
