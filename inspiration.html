@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiration</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Inspiration</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="inspiration.html">Gallery</a>
+    </nav>
+</header>
+
+<section class="inspiration">
+    <img src="photos/IMG_166029.JPG" onclick="openLightbox(this)">
+    <img src="photos/IMG_166030.JPG" onclick="openLightbox(this)">
+    <img src="photos/IMG_166032.JPG" onclick="openLightbox(this)">
+    <img src="photos/IMG_166036.JPG" onclick="openLightbox(this)">
+    <img src="photos/IMG_166041.JPG" onclick="openLightbox(this)">
+    <img src="photos/IMG_166043.JPG" onclick="openLightbox(this)">
+    <img src="photos/IMG_166050.JPG" onclick="openLightbox(this)">
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
+
+<script src="js/gallery.js"></script>
+
+</body>
+</html>
