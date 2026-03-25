@@ -15,20 +15,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggles = document.querySelectorAll(".gallery-toggle");
 
     toggles.forEach(function (toggle) {
+        const targetId = toggle.getAttribute("data-target");
+        const content = document.getElementById(targetId);
+        const symbol = toggle.querySelector(".toggle-symbol");
+
+        if (content.classList.contains("open")) {
+            symbol.textContent = "-";
+        } else {
+            symbol.textContent = "+";
+        }
+
         toggle.addEventListener("click", function () {
-            const content = toggle.nextElementSibling;
-            const symbol = toggle.querySelector(".toggle-symbol");
+            content.classList.toggle("open");
 
-            const isOpen = content.classList.contains("open");
-
-            if (isOpen) {
-                content.classList.remove("open");
-                toggle.classList.remove("expanded");
-                symbol.textContent = "+";
-            } else {
-                content.classList.add("open");
-                toggle.classList.add("expanded");
+            if (content.classList.contains("open")) {
                 symbol.textContent = "-";
+            } else {
+                symbol.textContent = "+";
             }
         });
     });
