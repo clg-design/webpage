@@ -17,18 +17,49 @@
     </nav>
 </header>
 
-<section class="gallery">
-    <img src="photos/gallery/IMG_166029.JPG" onclick="openLightbox(this)">
-    <img src="photos/gallery/IMG_166032.JPG" onclick="openLightbox(this)">
-    <img src="photos/gallery/IMG_166036.JPG" onclick="openLightbox(this)">
-    <img src="photos/gallery/IMG_166041.JPG" onclick="openLightbox(this)">
-    <img src="photos/gallery/IMG_166043.JPG" onclick="openLightbox(this)">
-    <img src="photos/gallery/IMG_166050.JPG" onclick="openLightbox(this)">
-</section>
+<main class="gallery-page">
 
-<!-- Lightbox -->
+    <!-- Section 1 -->
+    <section class="gallery-section">
+        <button class="gallery-toggle" type="button" data-target="section1">
+            <span class="toggle-symbol">+</span>
+            <span class="toggle-title">Title 1</span>
+        </button>
+
+        <!-- DEFAULT STATE CONTROL:
+             Add class="open" here to start expanded.
+             Leave it out to start closed. -->
+        <div id="section1" class="gallery-content open">
+            <p style="color:white; font-size:20px;">Test text inside section 1</p>
+            <div class="gallery-grid">
+                <img src="photos/IMG_166029.JPG" alt="Photo 1" class="thumb" onclick="openLightbox(this)">
+                <img src="photos/IMG_166030.JPG" alt="Photo 2" class="thumb" onclick="openLightbox(this)">
+                <img src="photos/IMG_166032.JPG" alt="Photo 3" class="thumb" onclick="openLightbox(this)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="gallery-section">
+        <button class="gallery-toggle" type="button" data-target="section2">
+            <span class="toggle-symbol">+</span>
+            <span class="toggle-title">Title 2</span>
+        </button>
+
+        <div id="section2" class="gallery-content open">
+            <p style="color:white; font-size:20px;">Test text inside section 2</p>
+            <div class="gallery-grid">
+                <img src="photos/IMG_166029.JPG" alt="Photo 4" class="thumb" onclick="openLightbox(this)">
+                <img src="photos/IMG_166030.JPG" alt="Photo 5" class="thumb" onclick="openLightbox(this)">
+                <img src="photos/IMG_166032.JPG" alt="Photo 6" class="thumb" onclick="openLightbox(this)">
+            </div>
+        </div>
+    </section>
+
+</main>
+
 <div id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img">
+    <img id="lightbox-img" alt="Expanded photo">
 </div>
 
 <script src="js/gallery.js"></script>
